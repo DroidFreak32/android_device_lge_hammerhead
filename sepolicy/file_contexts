@@ -178,3 +178,6 @@
 /sys/devices/virtual/power_supply/touch(/.*)?                        u:object_r:sysfs_batteryinfo:s0
 /sys/devices/battery_tm_ctrl.78/power_supply/batt_therm(/.*)?        u:object_r:sysfs_batteryinfo:s0
 /sys/devices/bq51013b_wlc.77/power_supply/wireless(/.*)?             u:object_r:sysfs_batteryinfo:s0
+
+# sysfs - sysfs_boot_adsp
+/sys/kernel/boot_adsp/boot    u:object_r:sysfs_boot_adsp:s0
