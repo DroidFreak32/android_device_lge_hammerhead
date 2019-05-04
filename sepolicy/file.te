@@ -30,3 +30,4 @@ type sysfs_usb_storage_gadget, fs_type, sysfs_type;
 type sysfs_boot_adsp, fs_type, sysfs_type;
 type sysfs_graphics, fs_type, sysfs_type;
 type sysfs_power_management, fs_type, sysfs_type;
+type sysfs_ramdumps, fs_type, sysfs_type;
