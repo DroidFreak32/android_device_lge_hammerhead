@@ -2,3 +2,4 @@ allow init tmpfs:lnk_file create_file_perms;
 allow init sysfs_usb_storage_gadget:file { setattr };
 allow init sysfs_boot_adsp:file { open write };
 allow init sysfs_devices_system_cpu:file { write };
+allow init sysfs_graphics:file { setattr };

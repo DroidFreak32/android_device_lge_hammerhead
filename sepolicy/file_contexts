@@ -142,12 +142,13 @@
 /sys/module/pm_8x60/modes(/.*)?        u:object_r:sysfs_mpdecision:s0
 
 # Sysfs files used by surfaceflinger
-/sys/devices/virtual/graphics/fb1/hpd          -- u:object_r:sysfs_surfaceflinger:s0
-/sys/devices/virtual/graphics/fb1/vendor_name  -- u:object_r:sysfs_surfaceflinger:s0
-/sys/devices/virtual/graphics/fb1/product_description       -- u:object_r:sysfs_surfaceflinger:s0
-/sys/devices/virtual/graphics/fb[1-2]/msm_fb_type  -- u:object_r:sysfs_surfaceflinger:s0
-/sys/devices/virtual/graphics/fb0/msm_fb_split  -- u:object_r:sysfs_surfaceflinger:s0
-/sys/devices/virtual/graphics/fb2     u:object_r:sysfs_surfaceflinger:s0
+/sys/devices/virtual/graphics/fb1/hpd                 -- u:object_r:sysfs_surfaceflinger:s0
+/sys/devices/virtual/graphics/fb1/vendor_name         -- u:object_r:sysfs_surfaceflinger:s0
+/sys/devices/virtual/graphics/fb1/product_description -- u:object_r:sysfs_surfaceflinger:s0
+/sys/devices/virtual/graphics/fb[1-2]/msm_fb_type     -- u:object_r:sysfs_surfaceflinger:s0
+/sys/devices/virtual/graphics/fb0/msm_fb_split        -- u:object_r:sysfs_surfaceflinger:s0
+/sys/devices/virtual/graphics/fb2                        u:object_r:sysfs_surfaceflinger:s0
+/sys/module/msm_thermal/core_control/enabled          -- u:object_r:sysfs_surfaceflinger:s0
 
 /sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk        u:object_r:sysfs_thermal:s0
 /sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk    u:object_r:sysfs_thermal:s0
@@ -184,3 +185,9 @@
 
 # sysfs - sysfs_boot_adsp
 /sys/kernel/boot_adsp/boot    u:object_r:sysfs_boot_adsp:s0
+
+# sysfs - graphics
+/sys/devices/mdp\.0/qcom,mdss_fb_primary.160/leds/lcd-backlight/brightness u:object_r:sysfs_graphics:s0
+/sys/devices/leds-qpnp-23/leds/(red|green|blue)/brightness                 u:object_r:sysfs_graphics:s0
+/sys/devices/leds-qpnp-23/leds/(red|green|blue)/on_off_ms                  u:object_r:sysfs_graphics:s0
+/sys/devices/leds-qpnp-23/leds/(red|green|blue)/rgb_start                  u:object_r:sysfs_graphics:s0
