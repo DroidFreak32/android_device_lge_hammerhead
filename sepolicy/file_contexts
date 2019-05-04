@@ -140,6 +140,8 @@
 # Sysfs files used by mpdecision
 /sys/module/pm2/modes(/.*)?            u:object_r:sysfs_mpdecision:s0
 /sys/module/pm_8x60/modes(/.*)?        u:object_r:sysfs_mpdecision:s0
+/sys/module/pm_8x60/modes/cpu[0-3]/power_collapse/suspend_enabled u:object_r:sysfs_mpdecision:s0
+/sys/module/pm_8x60/modes/cpu[0-3]/power_collapse/idle_enabled    u:object_r:sysfs_mpdecision:s0
 
 # Sysfs files used by surfaceflinger
 /sys/devices/virtual/graphics/fb1/hpd                 -- u:object_r:sysfs_surfaceflinger:s0
@@ -191,3 +193,9 @@
 /sys/devices/leds-qpnp-23/leds/(red|green|blue)/brightness                 u:object_r:sysfs_graphics:s0
 /sys/devices/leds-qpnp-23/leds/(red|green|blue)/on_off_ms                  u:object_r:sysfs_graphics:s0
 /sys/devices/leds-qpnp-23/leds/(red|green|blue)/rgb_start                  u:object_r:sysfs_graphics:s0
+
+# sysfs - sysfs_power_management
+/sys/devices/(fe20|fc88|fdce)0000\.qcom,(lpass|mss|venus)/subsys[0-2]/restart_level u:object_r:sysfs_power_management:s0
+/sys/devices/platform/bluetooth_rfkill/rfkill/rfkill0/type                          u:object_r:sysfs_power_management:s0
+/sys/module/lpm_resources/enable_low_power(/.*)?                                    u:object_r:sysfs_power_management:s0
+/sys/module/slimport/parameters/enable_irq                                          u:object_r:sysfs_power_management:s0

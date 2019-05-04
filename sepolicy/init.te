@@ -6,3 +6,5 @@ allow init sysfs_graphics:file { setattr };
 allow init sysfs_bluetooth_writable:file { setattr };
 allow init sysfs_surfaceflinger:file { setattr write };
 allow init sysfs_wlan_fwpath:file { setattr };
+allow init sysfs_mpdecision:file { open write };
+allow init sysfs_power_management:file { setattr open write };
