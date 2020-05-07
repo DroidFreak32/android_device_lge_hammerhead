@@ -9,6 +9,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)
 
+# Common Android Go configurations
+$(call inherit-product, build/target/product/go_defaults.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := hammerhead
 PRODUCT_NAME := lineage_hammerhead
